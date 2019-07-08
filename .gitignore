@@ -203,3 +203,5 @@ RoslynPad.zip
 
 *.appx
 *.msix
+.idea
+.DS_Store
