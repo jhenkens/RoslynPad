@@ -68,15 +68,21 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <DockPanel>
-                            <TabStrip Name="PART_TabStrip"
-                                      ItemTemplate="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=(Templates.HeaderTemplate)}"
-                                      Items="{TemplateBinding Items}"
-                                      SelectedIndex="{TemplateBinding SelectedIndex, Mode=TwoWay}" />
-                            <Carousel Name="PART_Content"
-                                      Items="{TemplateBinding Items}"
-                                      ItemTemplate="{TemplateBinding ItemTemplate}"
-                                      SelectedIndex="{TemplateBinding SelectedIndex}"
-                                      Grid.Row="1" />
+                            <ItemsPresenter 
+                                Name="PART_ItemsPresenter"
+                                Items="{TemplateBinding Items}"
+                                ItemsPanel="{TemplateBinding ItemsPanel}"
+                                MemberSelector="{TemplateBinding MemberSelector}"  
+                                ItemTemplate="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=(Templates.HeaderTemplate)}"
+                                />
+                            <ContentPresenter
+                                Name="PART_SelectedContentHost"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Content="{TemplateBinding SelectedContent}"
+                                ContentTemplate="{TemplateBinding SelectedContentTemplate}"
+                                />
                         </DockPanel>
                     </Border>
                 </ControlTemplate>
