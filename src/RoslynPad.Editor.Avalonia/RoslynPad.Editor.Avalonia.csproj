@@ -12,8 +12,8 @@
     <Compile Update="**\*.xaml.cs" SubType="Code" DependentUpon="%(Filename)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.7.0" />
-    <PackageReference Include="Avalonia.AvaloniaEdit" Version="0.7.0" />
+    <PackageReference Include="Avalonia" Version="0.8.1" />
+    <PackageReference Include="Avalonia.AvaloniaEdit" Version="0.8.0" />
     <PackageReference Include="System.Reactive.Linq" Version="4.1.2" />
   </ItemGroup>
   <ItemGroup>
